@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Cawasho from "./pages/Cawasho";
 import Dashboard from "./pages/Dashboard";
+import Update from "./pages/Update";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Header />} />
         <Route path="/cawasho" element={<Cawasho />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/update" element={<Update />} />
       </Routes>
     </div>
   );
