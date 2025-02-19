@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import image from "../assets/background.jpg";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Cawasho() {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Message, setMessage] = useState("");
-
+  const navigate = useNavigate();
   const handleEmpty = (e) => {
     e.preventDefault();
     setName("");
@@ -25,6 +26,7 @@ function Cawasho() {
       .then(() => {
         alert("Data inserted successfully");
         handleEmpty(e);
+        navigate("/dashboard");
       })
       .catch((error) => {
         console.log("There is an error: ", error);

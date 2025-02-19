@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Header />} />
         <Route path="/cawasho" element={<Cawasho />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/update" element={<Update />} />
+        <Route path="/update/:id" element={<Update />} />
       </Routes>
     </div>
   );
