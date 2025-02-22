@@ -15,7 +15,7 @@ function Update() {
       .then((res) => {
         setName(res.data[0].Name);
         setEmail(res.data[0].Email);
-        setMessage(res.data[0].Message);
+        setMessage(res.data[0].massage);
       })
       .catch((error) => {
         console.log("waxaa jira error  ", error);
@@ -42,7 +42,7 @@ function Update() {
 
   useEffect(() => {
     handleGetdata();
-  }, []); // Fetch data only once
+  }, []);
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
